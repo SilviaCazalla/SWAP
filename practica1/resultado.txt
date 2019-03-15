@@ -1,5 +1,5 @@
-##Práctica1:
-###Preparación de herramientas.
+# Práctica1:
+## Preparación de herramientas.
 
 En esta práctica hemos montado dos máuinas virtuales con VMWare con el sistema operativo Ubuntu.
 Una vez montadas hemos procedido a la instalación de apache2 y mysql en la terminal.
