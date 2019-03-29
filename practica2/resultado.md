@@ -14,7 +14,7 @@ tar:fichero comprido
 Instalamos la herramienta rsync
 
 ```
-sudo apt-get install rsync
+	sudo apt-get install rsync
 ```
 
 Hacemos que el usuario sea el dueño de la carpeta donde reciben los archivos que hay en el espacio web en ambas maquinas
