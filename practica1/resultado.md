@@ -11,5 +11,5 @@ Primero las hemos comprobado con el comando 'curl' el cual funciona en cada máq
 y entre ellas.
 Ahora abrimos los puertos ssh y comprobamos que las máquinas se ven entre ellas.
 
-![*Imagen que muestra ambas máquinas con las dos conexiones (ssh y curl) establecidas*](/mnt/c/users/silvia/desktop/p1-swap.jpg)
+![*Imagen que muestra ambas máquinas con las dos conexiones (ssh y curl) establecidas*](./img/p1-swap.jpg)
 
