@@ -72,9 +72,9 @@ Ahora podemos conectarnos por ssh sin contraseña.
  
  ![Imagen comando ssh que ya no pide la contraseña](./imagenes/P2-SSH SIN CONTRASEÑA.jpeg)
 
-	# En este punto tuvimos un problema con MAQ2, ya que anteriormente instalamos otra máquina con otra versión de ubuntu y con el mismo. 
+En este punto tuvimos un problema con MAQ2, ya que anteriormente instalamos otra máquina con otra versión de ubuntu y con el mismo. 
 		Aunque habia sido borrada desde VMWare, cuando entramos a MAQ2 encontramos la máquina antigua.
-	# Volvemos a instalar y configurar una máquina nueva siguiendo todos los pasos con el nombre MACHINE2 para no volver a tener este problema.
+Volvemos a instalar y configurar una máquina nueva siguiendo todos los pasos con el nombre MACHINE2 para no volver a tener este problema.
 
 Para ejecutar comandos añadiremos al final del comando ssh.
 
@@ -96,5 +96,5 @@ Primero probamos a cada minuto para comprobarlo más rapidamente y al ver que fu
 
 
 Trabajo realizado por :
-		- Silvia Cazalla Bazán.
-		- Jose María López Serrano.
+		# Silvia Cazalla Bazán.
+		# Jose María López Serrano.
