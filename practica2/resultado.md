@@ -1,15 +1,18 @@
 #Práctica2:
-##
+
 Creamos un tar con ficheros locales en un equipo remoto.
 tar:fichero comprido
 	* tar czf -/desktop | ssh usuario@ipdestino 'cat>~/tar.tgz'
 
-![Imagen comando tar](/mnt/c/users/silvia/desktop/P2-CLONAR.jpeg) 
+![Imagen comando tar](./P2-CLONAR.jpeg) 
 
 https://github.com/SilviaCazalla/SWAP/blob/master/practica2/P2-CLONAR.jpeg?raw=true
 
 Instalamos la herramienta rsync
-	* sudo apt-get install rsync
+
+```
+sudo apt-get install rsync
+```
 
 Hacemos que el usuario sea el dueño de la carpeta donde reciben los archivos que hay en el espacio web en ambas maquinas
 
@@ -24,6 +27,7 @@ Para probar rsync clonamos una carpeta:
 	* rsync -avz -e ssh IPdestino:/var/www/ /var/www/
 
 Lo comprobamos con: 
+
 	* ls -la /var/www/
 
 /
