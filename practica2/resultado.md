@@ -70,7 +70,7 @@ Copiamos la clave existente a la máquina principal (a la que queremos acceder d
 
 Ahora podemos conectarnos por ssh sin contraseña.
  
- ![Imagen comando ssh que ya no pide la contraseña](./imagenes/P2-SSH SIN CONTRASEÑA.jpeg)
+ ![Imagen comando ssh que ya no pide la contraseña](./imagenes/P2-SSH_SIN_CONTRASEÑA.jpeg)
 
 En este punto tuvimos un problema con MAQ2, ya que anteriormente instalamos otra máquina con otra versión de ubuntu y con el mismo. 
 		Aunque habia sido borrada desde VMWare, cuando entramos a MAQ2 encontramos la máquina antigua.
@@ -92,7 +92,7 @@ Establecemos una tarea en cron para mantener actualizado el contenido del direct
 
 Primero probamos a cada minuto para comprobarlo más rapidamente y al ver que funciona lo dejamos a cada hora.
 
-![Imagen crontab actualizando la otra máquina](./imagenes/P2-CRONTAB ACTUALIZA.jpeg)
+![Imagen crontab actualizando la otra máquina](./imagenes/P2-CRONTAB_ACTUALIZA.jpeg)
 
 
 Trabajo realizado por :
