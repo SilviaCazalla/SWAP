@@ -1,5 +1,5 @@
 # Práctica2:
-# Configuración de rsync y crontab
+## Configuración de rsync y crontab
 
 Aclaraciones:
 	- En nuestro caso la máquina configurada para ser la principar, es la máquina 2.
@@ -96,5 +96,8 @@ Primero probamos a cada minuto para comprobarlo más rapidamente y al ver que fu
 
 
 Trabajo realizado por :
-		# Silvia Cazalla Bazán.
-		# Jose María López Serrano.
+
+```
+		 Silvia Cazalla Bazán.
+		 Jose María López Serrano.
+```
