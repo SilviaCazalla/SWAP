@@ -4,12 +4,7 @@ Creamos un tar con ficheros locales en un equipo remoto.
 tar:fichero comprido
 	* tar czf -/desktop | ssh usuario@ipdestino 'cat>~/tar.tgz'
 
-/
-/
-/
-/
-/
-/
+![Imagen comando tar](/mnt/c/users/silvia/desktop/P2-CLONAR.jpeg) 
 
 Instalamos la herramienta rsync
 	* sudo apt-get install rsync
