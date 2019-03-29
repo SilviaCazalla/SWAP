@@ -6,6 +6,8 @@ tar:fichero comprido
 
 ![Imagen comando tar](/mnt/c/users/silvia/desktop/P2-CLONAR.jpeg) 
 
+https://github.com/SilviaCazalla/SWAP/blob/master/practica2/P2-CLONAR.jpeg?raw=true
+
 Instalamos la herramienta rsync
 	* sudo apt-get install rsync
 
