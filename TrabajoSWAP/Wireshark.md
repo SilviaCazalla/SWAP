@@ -8,12 +8,12 @@
 
 Trabajo realizado por:
 
-´´´
+```
 
 	- Silvia Cazalla Bazán
 	- Jose María López Serrano
 
-´´´ 
+``` 
 
 
 **Índice**
@@ -34,8 +34,8 @@ Trabajo realizado por:
 	9- ...
 
 
-
-## 1- Introducción:<a name="introduccion"></a>
+<div id = 'introduccion'/>
+## 1- Introducción:
 
 
 La complejida que estan alcanzando las redes informáticas y la exigencia en cuanto a 
