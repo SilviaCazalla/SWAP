@@ -3,12 +3,14 @@
 ![Imagen de portada](./imagenes/wire.jpg)
 
 
-´´´
+
 # Índice
+´´´ 
 	1- Introdución.
 	2- 
 	3- 
-	4- 
+	4-
+ 
 ´´´
 
 
