@@ -1,7 +1,7 @@
 
-##Práctica 3:
+## Práctica 3:
 
-#Balanceadores de carga.
+# Balanceadores de carga.
 
 En esta práctica hemos creado dos máquinas virtuales nuevas de modo, que cada una tiene una configuración como 
 balanceador. La nueva máquina virtual "Maq3Balanceador" en la que hemos configurado el balanceador tipo
@@ -32,5 +32,5 @@ balanceador de tipo nginx distribuye carga al realizar varios 'curl' a esta máq
 Trabajo realizado por:
 
 	-Nombre: Silvia Cazalla Bazán		Email: silviacazallabazan@gmail.com
-	-Nombre: Jose María López Serrano	Email: 
+	-Nombre: Jose María López Serrano	Email: stock3xl@gmail.com
 
