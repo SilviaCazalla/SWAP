@@ -2,16 +2,17 @@
 
 ![Imagen de portada](./imagenes/wire.jpg)
 
+Trabajo realizado por:
+	- Silvia Cazalla Bazán
+	- Jose María López Serrano
 
 
 # Índice
-´´´ 
+ 
 	1- Introdución.
 	2- 
 	3- 
 	4-
- 
-´´´
 
 
 
