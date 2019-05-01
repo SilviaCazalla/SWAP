@@ -62,7 +62,7 @@ almacenamiento y procesamiento de la información ya que nos permite compartir d
 igual manera nos permite establecer los recursos a los que se puedan acceder en la red.
 
 
-## 1.1- Justificación:
+## 1.1. Justificación:
 
 Wireshark es un software de grandes capacidades para el manejo de redes, soporta varios 
 protocolos entre otras cualidades que se describirán a lo largo del trabajo.
@@ -77,20 +77,20 @@ Con este trabajo se pretende dar a conocer las funcionalidades básicas en el an
 captura de paquetes en una red mediante Wireshark a los usuarios interesados en las redes.
  
 
-# 2- Utilidades analizador de red (Wireshark):
+# 2. Utilidades analizador de red (Wireshark):
 
 Antes de empezar a aprender como podemos analizar y filtrar el tráfico deseado, es importante
 saber la multitud de utilidades que posee wireshark.
 Este analizador de red puede ayudarnos en:
 
-´´´
+```
 	- Detección de intrusos en nuestra red.
 	- Descubrir cuellos de botella, con el análisis de rendimiento.
 	- El análisis de las operaciones de las aplicaciones.
 	- Descubrir origen de la denegación de servicios o los virus.
 	- Resolución de problemas en la red.
 
-´´´
+```
 
 
 # 3. Metodología:
