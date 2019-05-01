@@ -1,3 +1,4 @@
+
 # Análisis de tráfico con Wireshark
 
 
@@ -22,22 +23,26 @@ Trabajo realizado por:
 		1.1. Justificación.]
 	2. Utilidades analizador de red (Wireshark).
 	3. Metodología
-		3.1. Reconocimiento y clasificación de los paquetes.
-		3.2- Filtros para la observación del tráfico deseado en las redes.
-		3.3- Escaneo y enumeración de puertos en la red.
-		3.4- Análisis, gráficos y estadisticas de los paquetes de datos.
+		3.1. Filtros para la observación del tráfico deseado en las redes.
+			3.1.1. Modo promiscuo.
+			3.1.2. Escaneo y captura de paquetes.
+			3.1.3. Filtrado de Paquetes de Datos.	
+		3.2. Análisis, gráficos y estadisticas de los paquetes de datos.
 	4- Importancia de la seguridad en los paquetes de datos para evitar ataques.
+		4.1. Técnicas avanzadas de Sniffing.
+		4.2. Asegurar los paquetes de datos en una Red de los Sniffers.
 	5- Cifrado, encriptación (seguir desarrollando puntos trabajo).
 	6- ...
 	7- ...
 	8- ...
-	9- ...
+	9- Programas Empaquetados con Wireshark.
+	10- Archivos adjuntos.
 
 ***
 
 
-<div id = 'introduccion'/>
-## 1- Introducción:
+
+# 1. Introducción:
 
 
 La complejida que estan alcanzando las redes informáticas y la exigencia en cuanto a 
@@ -57,7 +62,7 @@ almacenamiento y procesamiento de la información ya que nos permite compartir d
 igual manera nos permite establecer los recursos a los que se puedan acceder en la red.
 
 
-# 1.1- Justificación:<a name="justificacion"></a>
+## 1.1- Justificación:
 
 Wireshark es un software de grandes capacidades para el manejo de redes, soporta varios 
 protocolos entre otras cualidades que se describirán a lo largo del trabajo.
@@ -72,7 +77,7 @@ Con este trabajo se pretende dar a conocer las funcionalidades básicas en el an
 captura de paquetes en una red mediante Wireshark a los usuarios interesados en las redes.
  
 
-## 2- Utilidades analizador de red (Wireshark):
+# 2- Utilidades analizador de red (Wireshark):
 
 Antes de empezar a aprender como podemos analizar y filtrar el tráfico deseado, es importante
 saber la multitud de utilidades que posee wireshark.
@@ -87,4 +92,117 @@ Este analizador de red puede ayudarnos en:
 
 ´´´
 
+
+# 3. Metodología:
+
+Wireshark implementa una amplia gama de filtros que facilitan la definición de criterios de
+búsqueda gracias a que "entiende la estructura de los protocolos", podemos visualizar campos
+de cada una de las cabeceras y desglosarlas, proporcionando un gran abanico de posibilidades
+al administrados de redes a la hora de abordas ciertas tareas en el análisis de tráfico.
+
+La metodología de wireshark se puede dividir en tres pasos, colección, conversión y analisis.
+
+En la colección rastreamos los paquetes recogiendo los datos binarios del cable de red.
+Por lo general esto se hace cambiando la interfaz de red seleccionada en modo promiscuo. En
+este modo la tarjeta de red puede escuchar todo el tráfiico en un segmento de red, no
+solamete el tráfico que sedirija a este.
+
+En el paso de conversión, convertimos los datos binarios capturados en el paso anterior de 
+forma que sean legibles, en este paso los datos de red pueden ser interpretados, aunque sólo
+en un nivel muy básico, dejando la mayoría de los análisis para el usuario final.
+
+Para finalizar el análisis, donde el usuario final tendría que encargarse del análisis real 
+de la captuea y convertir los datos. El rastreador de red captura paquetes de datos, 
+verifica su protocolo basado en la información extraida y comienza su análisis de las 
+caracteríasticas del protocolo.
+
+Por tanto utilizaremos la metodología inductiva porque es una herramienta de investigación 
+que nos permitirá obtener resultaos específicos a partir de hechos generales; comenzando con
+una parte de la investigación hasta terminar con la misma.
+
+La metodología deductiva es una herramenta de investigación que considera que los hechos 
+generales definen la investigación específica. La investigación deductiva es válida cuando
+los hechos son verdaderos.
+
+
+## 3.1. Filtros para la observación del tráfico deseado:
+
+### 3.1.1. Modo promiscuo:
+
+Para poder capturar paquetes en una red, se necesita una tarjeta de interfaz de res (NIC) 
+que soporta un controlador en modo promiscuo. Este modo es lo que permite a una tarjeta
+ver todos los paquetes que cruzan en la red. Sólo si estamos en este modo podemos asegurar
+la captura de todo el tráfico independientemente de la dirección.
+
+Una vez llega a la CPU, entonces puede ser tomado por una aplicación de sniffing de 
+paquetes para su análisis y captura. NIC más modernos soportan el modo promiscuo, y 
+Wireshark incluye los controladores de libcap/WinPcap, que le permite pasar su tarjeta de 
+red en modo promiscuo directamente desde la interfaz gráfica de Wireshark.
+
+### 3.1.2. Escaneo y captura de paquetes:
+
+Depende del tipo de análisis, pero a menudo se hace primero en contra de un sistema, es un
+escaneo TCP SYN, también conocido como un escaneo de sigili o un análisis de medio abierto.
+Un escaneo SYN es el tipo más común por varias razones;
+	
+´´´
+
+	- Es muy rápido y fiable,
+	- Es preciso entodas las plataformas, independientemente de la aplicación sobre TCP.
+	- Es menos ruidoso que otras técnicas de escaneo.
+
+´´´
+
+El escaneo TCP SYN se basa en el proceso de negociación de tres vías para determinar qué 
+puertos están abierto en un host destino. El atacante envía un paquete SYN TCP a un rango 
+de puertos en la víctima, como si tratara de establecer un canal para la comunicación normal
+en los puertos.
+
+Una vez que este paquete es recibido por la víctima, una de las pocas cosas que pueden 
+suceder es como se muestra en la imagen a continuación, posibles resultados de un escaneo
+TCP SYN.
+
+![Imagen que muestra los distintos resultados del escaneo TCP SYN](./imagenes/TCP-SYN.jpg)
+
+(pon algo mas si quieres, explica la imagen o lo que sea)
+
+
+### 3.1.3. Filtrado de paquetes de datos:
+
+Los filtros permiten especificar exactamente qué paquetes tenemos disponibles para su 
+análisis. Un filtro es una expresión que define los criterios para la inclusión o exclusión 
+de los paquetes.
+Estos filtros se utilizan durante el proceso de captura con la finalidad de mejorar el 
+rendimiento.
+
+Aunque el filtrado se puede realizar como hemos mencionado antes, durante captura, durante 
+la visualización o después de guardar el paquete de datos que contienen las tramas obtenidas.
+
+(Hay que añadir filtros y tipos de filtros de las practicas de redes y lo que se ocurra más)
+
+
+## 3.2. Análisis, gráficos y estadísticas de los paquetes:
+
+(esto que lo haga el chema que ya le vale)
+
+
+# 4. Importancia de la seguridad en los paquetes de datos para evitar ataques:
+
+Es importante la implementación de medidas de seguridad y el análisis de nuestra red para
+confirmar que no hay ningún intruso que pueda robarnos algo.
+
+En cualquier momento podrían atacarnos con un programa de sniffer, más entendible como un 
+atacante planea antes de realizar su objetio en la red, o la información.
+
+## 4.1. Técnicas avanzadas de sniffing:
+(no meter escaneo)
+## 4.2. Asegurar los paquetes de datos en una Red de los Sniffers:
+
+
+
+
+
+
+
+ 
 
