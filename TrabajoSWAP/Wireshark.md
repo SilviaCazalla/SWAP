@@ -18,11 +18,11 @@ Trabajo realizado por:
 
 **Índice**
  
-	1. [Introdución.](#introduccion)
-		1.1. [Justificación.](#justificacion)
-	2- Utilidades analizador de red (Wireshark).
-	3- Metodología
-		3.1- Reconocimiento y clasificación de los paquetes.
+	1. Introdución.
+		1.1. Justificación.]
+	2. Utilidades analizador de red (Wireshark).
+	3. Metodología
+		3.1. Reconocimiento y clasificación de los paquetes.
 		3.2- Filtros para la observación del tráfico deseado en las redes.
 		3.3- Escaneo y enumeración de puertos en la red.
 		3.4- Análisis, gráficos y estadisticas de los paquetes de datos.
@@ -32,6 +32,8 @@ Trabajo realizado por:
 	7- ...
 	8- ...
 	9- ...
+
+***
 
 
 <div id = 'introduccion'/>
