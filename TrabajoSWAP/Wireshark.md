@@ -145,13 +145,13 @@ Depende del tipo de análisis, pero a menudo se hace primero en contra de un sis
 escaneo TCP SYN, también conocido como un escaneo de sigili o un análisis de medio abierto.
 Un escaneo SYN es el tipo más común por varias razones;
 	
-´´´
+```
 
 	- Es muy rápido y fiable,
 	- Es preciso entodas las plataformas, independientemente de la aplicación sobre TCP.
 	- Es menos ruidoso que otras técnicas de escaneo.
 
-´´´
+```
 
 El escaneo TCP SYN se basa en el proceso de negociación de tres vías para determinar qué 
 puertos están abierto en un host destino. El atacante envía un paquete SYN TCP a un rango 
