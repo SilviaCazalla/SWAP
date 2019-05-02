@@ -32,7 +32,7 @@ Trabajo realizado por:
 		4.1. Técnicas avanzadas de Sniffing.
 		4.2. Asegurar los paquetes de datos en una Red de los Sniffers.
 	5- Cifrado, encriptación (seguir desarrollando puntos trabajo).
-	6- ...
+	6- Primeros paros con Wireshark
 	7- ....
 	8- ...
 	9- Programas Empaquetados con Wireshark.
@@ -211,11 +211,31 @@ atacante planea antes de realizar su objetio en la red, o la información.
 (no meter escaneo)
 ## 4.2. Asegurar los paquetes de datos en una Red de los Sniffers:
 
+# 6. Primeros pasos con Wireshark
 
+Podemos descargarnos Wireshark desde la página https://www.wireshark.org/ de manera gratuita.
+Para instalarlo hemos abierto el ejecutable y hemos mantenido la configuración que aparece de
+manera predeterminada, haciendo clic en Continuar hasta finalizar la instalación.
 
+Una vez instalado ya podemos comenzar a capturar paquetes. Lo primero que debemos hacer al 
+iniciar Wireshark es elegir la conexión de red que queremos analizar.
 
+foto
 
+(En nuestro caso hemos elegido Wi-Fi)
 
+Automaticamente veremos como la pantalla empieza a llenarse con una lista de paquetes. Wireshark
+capturará cada paquete enviado hacia o desde tu sistema. 
 
- 
+Para detener la captura pulsaremos el boton rojo de la esquina superior derecha.
+
+Los paquetes aparecerán por defecto en el orden en que han sido capturados y se mostraran una 
+serie de propiedades dependiendo de las columnas activas en ese momento. Haciendo clic derecho 
+en la barra donde aparecen las columnas podemos editarlas seleccionando la opción "Column 
+Preferences".
+
+Para realizar un filtro podemos usar la barra de texto que aparece justo encima de la lista 
+de paquetes para escribir dicho filtro o seleccionar cualquier propiedad específica de un 
+paquete haciendo clic derecho en ella, "Apply as Filter" y elegir si queremos que se añada 
+por conjunción o por disyunción.
 
