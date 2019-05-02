@@ -241,11 +241,13 @@ por conjunción o por disyunción.
 
 Otra opción interesante sería mostrar gráficas con Wireshark y lo haremos desde Statics.
 Hemos visto dos tipos de gráficas:
-	I/O Graphs:
-		Es un gráfico configurable por el usuario de los paquetes capturados, 
-		pueden definirse hasta 5 gráficos de distintos colores.
-		El eje X se medirá el tiempo y en el eje Y el número de paquetes por segundo.
-	Flow Graphs:
-		Es un gráfico que muestra un diagrama temporal con el flujo de los paquetes 
-		indicando la IP destino y origen de cada uno, indicando los bits de SYN, ACK, 
-		FIN, además de otros datos relevantes en el margen derecho.
+```
+I/O Graphs:
+	Es un gráfico configurable por el usuario de los paquetes capturados, 
+	pueden definirse hasta 5 gráficos de distintos colores.
+	El eje X se medirá el tiempo y en el eje Y el número de paquetes por segundo.
+Flow Graphs:
+	Es un gráfico que muestra un diagrama temporal con el flujo de los paquetes 
+	indicando la IP destino y origen de cada uno, indicando los bits de SYN, ACK, 
+	FIN, además de otros datos relevantes en el margen derecho.
+```
