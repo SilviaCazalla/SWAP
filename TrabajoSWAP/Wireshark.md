@@ -7,7 +7,7 @@
 
 
 
-Trabajo realizado por:
+Trabajo realizado por: 
 
 ```
 
@@ -33,7 +33,7 @@ Trabajo realizado por:
 		4.2. Asegurar los paquetes de datos en una Red de los Sniffers.
 	5- Cifrado, encriptación (seguir desarrollando puntos trabajo).
 	6- ...
-	7- ...
+	7- ....
 	8- ...
 	9- Programas Empaquetados con Wireshark.
 	10- Archivos adjuntos.
