@@ -164,22 +164,6 @@ TCP SYN.
 
 ![Imagen que muestra los distintos resultados del escaneo TCP SYN](./imagenes/TCP-SYN.jpg)
 
-(pon algo mas si quieres, explica la imagen o lo que sea)
-
-
-### 3.1.3. Filtrado de paquetes de datos:
-
-Los filtros permiten especificar exactamente qué paquetes tenemos disponibles para su 
-análisis. Un filtro es una expresión que define los criterios para la inclusión o exclusión 
-de los paquetes.
-Estos filtros se utilizan durante el proceso de captura con la finalidad de mejorar el 
-rendimiento.
-
-Aunque el filtrado se puede realizar como hemos mencionado antes, durante captura, durante 
-la visualización o después de guardar el paquete de datos que contienen las tramas obtenidas.
-
-(Hay que añadir filtros y tipos de filtros de las practicas de redes y lo que se ocurra más)
-
 
 ## 3.2. Análisis y gráficos de los paquetes:
 
@@ -251,3 +235,18 @@ Flow Graphs:
 	indicando la IP destino y origen de cada uno, indicando los bits de SYN, ACK, 
 	FIN, además de otros datos relevantes en el margen derecho.
 ```
+
+Filtrado de paquetes de datos:
+
+Los filtros permiten especificar exactamente qué paquetes tenemos disponibles para su 
+análisis. Un filtro es una expresión que define los criterios para la inclusión o exclusión 
+de los paquetes.
+Estos filtros se utilizan durante el proceso de captura con la finalidad de mejorar el 
+rendimiento.
+
+Aunque el filtrado se puede realizar como hemos mencionado antes, durante captura, durante 
+la visualización o después de guardar el paquete de datos que contienen las tramas obtenidas.
+
+(Hay que añadir filtros y tipos de filtros de las practicas de redes y lo que se ocurra más)
+
+
