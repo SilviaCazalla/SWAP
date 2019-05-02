@@ -181,11 +181,23 @@ la visualización o después de guardar el paquete de datos que contienen las tr
 (Hay que añadir filtros y tipos de filtros de las practicas de redes y lo que se ocurra más)
 
 
-## 3.2. Análisis, gráficos y estadísticas de los paquetes:
+## 3.2. Análisis y gráficos de los paquetes:
 
-(esto que lo haga el chema que ya le vale)
-Ya le vale a la silvia que le gusta muscho irse de fiesta
-Y el chema que es un perro judio
+El análisis es la parte fundamental del uso de Wireshark, para la interpretación de datos en 
+tiempo real de lo que está sucediendo en la red.
+
+Todos los problemas de red se reflejan en los paquetes, por lo que un buen conocimiento y
+análisis de estos nos permitirán controlar la red y resolver sus problemas.
+
+Para un buen análisis, no debemos capturar paquetes de datos sólo cuando existan problemas en
+la red si no que debemos conocer el tráfico habitual y sin problemas de esa red para así tener
+un punto de referencia a partir del cual poder comparar.
+
+Una de las herramientas que Wireshark nos brinda para el análisis son los gráficos, que nos
+permiten tener una visión general de los datos.
+
+La ventana de gráficos permite analizar el rendimiento de los datos de la red, pudiéndose 
+encontrar picos y momentos de calma en el rendimiento, observar retrasos y comparar flujos.
 
 # 4. Importancia de la seguridad en los paquetes de datos para evitar ataques:
 
