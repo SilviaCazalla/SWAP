@@ -185,6 +185,7 @@ la visualización o después de guardar el paquete de datos que contienen las tr
 
 (esto que lo haga el chema que ya le vale)
 Ya le vale a la silvia que le gusta muscho irse de fiesta
+Y el chema que es un perro judio
 
 # 4. Importancia de la seguridad en los paquetes de datos para evitar ataques:
 
