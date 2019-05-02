@@ -184,7 +184,7 @@ la visualización o después de guardar el paquete de datos que contienen las tr
 ## 3.2. Análisis, gráficos y estadísticas de los paquetes:
 
 (esto que lo haga el chema que ya le vale)
-
+Ya le vale a la silvia que le gusta muscho irse de fiesta
 
 # 4. Importancia de la seguridad en los paquetes de datos para evitar ataques:
 
