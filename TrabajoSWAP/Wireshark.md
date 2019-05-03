@@ -320,34 +320,41 @@ con el que nos aseguramos de que se trata del tráfico que va o viene de nuestra
 ```
 (dns or tcp) and ip.addr== XXX.XX.XX.X
 
+
 ```
-	- Otra mejora con
+Otra mejora con
+
 ```
  dns.qry.type==1
 
 ```
- 	devolviendo el tráfico que se genera al preguntar por la IPv4.
+devolviendo el tráfico que se genera al preguntar por la IPv4.
 	
-	- También podría realizarse con una palabra clave, si por ejemplo en nuestro 
-	caso, dicha palabra fuera "practica", escribiríamos el filtro
+- También podría realizarse con una palabra clave, si por ejemplo en nuestro 
+caso, dicha palabra fuera "practica", escribiríamos el filtro
+
 ```
 ((dns.qry.type==1 and dns contains practica) or tcp) and ip.addr=XXX.XX.XX.X
 
 ```
-	- Se puede segir mejorando, sabiendo que la conexión para http se hace en el 
-	puerto 80
+
+- Se puede segir mejorando, sabiendo que la conexión para http se hace en el 
+puerto 80
+
 ```
 cambiar tcp por; tcp.port==80
 ```
-	Así eliminacmos las conexiones tcp que no sean del protocoloto http.
+Así eliminacmos las conexiones tcp que no sean del protocoloto http.
 
-	- Para que nos muestre segmentos tcp y sus flas, por ejemplo ACK;
+- Para que nos muestre segmentos tcp y sus flas, por ejemplo ACK;
+
 ```
 tcp.flags.ack==o	tcp.flags.syn==1	tcp.flags.fin==1
 
 ```
 
 Filtro para visualizar los mensajes ICMP
+
 ```
 ip.addr==XXX.XX.XX.X and icmp
 
