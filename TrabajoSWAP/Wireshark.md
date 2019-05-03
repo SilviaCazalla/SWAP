@@ -131,10 +131,15 @@ que soporta un controlador en modo promiscuo. Este modo es lo que permite a una 
 ver todos los paquetes que cruzan en la red. Sólo si estamos en este modo podemos asegurar
 la captura de todo el tráfico independientemente de la dirección.
 
-Una vez llega a la CPU, entonces puede ser tomado por una aplicación de sniffing de 
-paquetes para su análisis y captura. NIC más modernos soportan el modo promiscuo, y 
-Wireshark incluye los controladores de libcap/WinPcap, que le permite pasar su tarjeta de 
-red en modo promiscuo directamente desde la interfaz gráfica de Wireshark.
+En nuestro caso resultaba imposible poner la tarjeta de red en modo promiscuo, ya que en 
+el caso de windows no esta permitido. Si quisieramos obtener todo el tráfico que se 
+genera por ejemplo en la comversación de dos pc, una manera sencilla sería descargar un 
+servidor FTP/TFTP gratuito, o configurar uno de los pc para ello, una de las mejores
+opciones para windows.
+
+NIC más modernos soportan el modo promiscuo, y Wireshark incluye los controladores de
+libcap/WinPcap, que le permite pasar su tarjeta de red en modo promiscuo directamente
+desde la interfaz gráfica de Wireshark.
 
 ### 3.1.2. Escaneo y captura de paquetes:
 
@@ -241,5 +246,135 @@ Aunque el filtrado se puede realizar como hemos mencionado antes, durante captur
 la visualización o después de guardar el paquete de datos que contienen las tramas obtenidas.
 
 (Hay que añadir filtros y tipos de filtros de las practicas de redes y lo que se ocurra más)
+
+
+### 5.2. Conjunto básico de filtros para el usuario administrador:
+
+Wireshark cuenta con un gran número de filtros, los cuales podemos diferenciarlos 
+principalmente por el tipo de protocolo que buscan, y dentro de estos hay distintas 
+propiedades o características de dichos protocolos, las cuales ayudan bastante en 
+cualquier búsqueda específica.
+
+DNS: Si cólo ponemos el filtro
+```
+ dns
+
+```
+Wireshark nos devolverá todas las tramas que sean
+del protocolo dns. Después podemos y añadiendo más características como hemos mencionado
+anteriormente, entre ellos:
+
+```	
+dns contains NOMBREWEB
+
+```
+el cual sólo nos mostrará tráfico dns asociado a la carga de dicha página web.
+
+```	
+Follow UDP Stream
+
+```
+
+nos devuelve las respués que ha recibido a la pregunta del Dns que se ha realizado.
+Sabiendo el tráfico Dns, es posible conocer la IP del servidor( Puede verse en el campo
+"info, detrás de CNAME, 'A' ").
+
+En una conexión persistente, con 
+
+```
+Follow TCP Stream
+
+```
+puede verse cuantos objetos de la página base se han solicitado en la conexión.
+
+Si queremos observar conexiones entre el navegador y el servidor web, aplicamos un filtro
+que muestre sólo las PDU del protocolo HTTP, dicho filtro se escribe igual 
+
+```
+http
+
+```
+y en este caso Wireshark nos permite ordenar el listado de tramas creando una columna
+"SrcPort". 
+Si la página con la que estamos trabajando ya ha sido visitada antes y no ha sido 
+actualizada después de dicha visita, Wireshark no capturará nada, ya que estará guardado
+en la caché del navegador y no tendrá que realizar ningún trámite con el servidor web.
+
+
+UDP/TCP: Otro filtro bastante utilizado es
+
+```
+ udp or tcp
+
+```
+El cual devuelve sólo tramas del protocolo UDP o del TCP.
+
+``` 
+ (udp or tcp) and ip.addr==XXX.XX.XX.X
+
+```
+con el que nos aseguramos de que se trata del tráfico que va o viene de nuestra red.
+	- Con lo que ya sabemos, si queremos visualizar el tráfico UDP y TCP este se 
+	asocia a DNS, luego usamos: 
+
+```
+(dns or tcp) and ip.addr== XXX.XX.XX.X
+
+```
+	- Otra mejora con
+```
+ dns.qry.type==1
+
+```
+ 	devolviendo el tráfico que se genera al preguntar por la IPv4.
+	
+	- También podría realizarse con una palabra clave, si por ejemplo en nuestro 
+	caso, dicha palabra fuera "practica", escribiríamos el filtro
+```
+((dns.qry.type==1 and dns contains practica) or tcp) and ip.addr=XXX.XX.XX.X
+
+```
+	- Se puede segir mejorando, sabiendo que la conexión para http se hace en el 
+	puerto 80
+```
+cambiar tcp por; tcp.port==80
+```
+	Así eliminacmos las conexiones tcp que no sean del protocoloto http.
+
+	- Para que nos muestre segmentos tcp y sus flas, por ejemplo ACK;
+```
+tcp.flags.ack==o	tcp.flags.syn==1	tcp.flags.fin==1
+
+```
+
+Filtro para visualizar los mensajes ICMP
+```
+ip.addr==XXX.XX.XX.X and icmp
+
+```
+
+Ver sólo tramas con cierta expresión lógica
+```
+(eth.addr==Mac_de_mi_pc and arp) or (ip.addr==IP_de_mi_pc and icmp)
+
+```
+
+
+# 6. Programas empaquetados con Wireshark:
+
+
+# 7. Prácticas realizadas con Wireshark en el ordenador personal:
+
+# 8. Archivos adjuntos.
+  
+
+
+
+
+
+
+
+
+
 
 
