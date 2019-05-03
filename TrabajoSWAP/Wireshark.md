@@ -25,18 +25,15 @@ Trabajo realizado por:
 	3. Metodología
 		3.1. Filtros para la observación del tráfico deseado en las redes.
 			3.1.1. Modo promiscuo.
-			3.1.2. Escaneo y captura de paquetes.
-			3.1.3. Filtrado de Paquetes de Datos.	
-		3.2. Análisis, gráficos y estadisticas de los paquetes de datos.
-	4- Importancia de la seguridad en los paquetes de datos para evitar ataques.
-		4.1. Técnicas avanzadas de Sniffing.
-		4.2. Asegurar los paquetes de datos en una Red de los Sniffers.
-	5- Cifrado, encriptación (seguir desarrollando puntos trabajo).
-	6- Primeros paros con Wireshark
-	7- ....
-	8- ...
-	9- Programas Empaquetados con Wireshark.
-	10- Archivos adjuntos.
+			3.1.2. Escaneo y captura de paquetes.	
+		3.2. Análisis y gráficos de los paquetes de datos.
+	4. Importancia de la seguridad en los paquetes de datos para evitar ataques.
+	5. Primeros paros con Wireshark
+		5.1. Filtrado de paquetes de datos.
+		5.2. Conjunto básico de filtros para el usuario administrador.
+	6. Programas Empaquetados con Wireshark.
+	7. Prácticas realizadas con Wireshark en el ordenador personal.
+	8. Archivos adjuntos.
 
 ***
 
@@ -191,11 +188,7 @@ confirmar que no hay ningún intruso que pueda robarnos algo.
 En cualquier momento podrían atacarnos con un programa de sniffer, más entendible como un 
 atacante planea antes de realizar su objetio en la red, o la información.
 
-## 4.1. Técnicas avanzadas de sniffing:
-(no meter escaneo)
-## 4.2. Asegurar los paquetes de datos en una Red de los Sniffers:
-
-# 6. Primeros pasos con Wireshark
+# 5. Primeros pasos con Wireshark
 
 Podemos descargarnos Wireshark desde la página https://www.wireshark.org/ de manera gratuita.
 Para instalarlo hemos abierto el ejecutable y hemos mantenido la configuración que aparece de
@@ -236,7 +229,7 @@ Flow Graphs:
 	FIN, además de otros datos relevantes en el margen derecho.
 ```
 
-Filtrado de paquetes de datos:
+### 5.1. Filtrado de paquetes de datos:
 
 Los filtros permiten especificar exactamente qué paquetes tenemos disponibles para su 
 análisis. Un filtro es una expresión que define los criterios para la inclusión o exclusión 
