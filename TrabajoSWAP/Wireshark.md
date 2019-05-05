@@ -424,7 +424,7 @@ DNS.cname contains kia
 
 ```
 
-![Filtro para DNS](./imagenes/kia.jpg)
+![Filtro para DNS](./imagenes/kia.png)
 
 ## 7.2. Interpretación de una conexión
 
@@ -432,7 +432,7 @@ Vamos a mostrar las tramas generadas al entrar en la página web www.habanos.com
 
 Para ver los puertos origen y destino hemos creado dos columnas nuevas.
 
-![Creación de columna](./imagenes/nueva columna.jpg)
+![Creación de columna](./imagenes/nueva columna.png)
 
 A continuación crearemos un filtro para escuchar sólo los paquetes que usen el puerto 80.
 
