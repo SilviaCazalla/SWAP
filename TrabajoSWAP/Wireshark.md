@@ -424,7 +424,7 @@ DNS.cname contains kia
 
 ```
 
-![Filtro para DNS](./imagenes/kia.png)
+![Filtro para DNS](./imagenes/DNSKIA.jpg)
 
 ## 7.2. Interpretación de una conexión
 
