@@ -369,6 +369,41 @@ Ver sólo tramas con cierta expresión lógica
 
 # 6. Programas empaquetados con Wireshark:
 
+La instalación de Wireshark incluye otros programas de apoyo para comandos (Tshark) y ayuda para la manipulación, evaluación y creación de archivos de captura (editcap, mergecap, text2pcap, capinfos y Dumpcap).
+
+Estos programas juntos permiten una potente manipulación de las capturas.
+
+## 6.1 Tshark
+
+Es la versión de línea de comandos de Wireshark. Permite capturar, decodificar e imprimir la pantalla de paquetes para guardar o leer los archivos de captura.
+
+Tanto Tshark como Wireshark usan la misma biblioteca libpcap y casi el mismo código.
+
+## 6.2 Editcap
+
+Se usa para eliminar, para seleccionar paquetes desde un archivo y para convertir el formato de esos archivos. Sólo lee datos de un archivo guardado para crear un archivo de captura nueva; por defecto escribe en libpcap.
+
+Tambien es capaz de leer archivos gzip comprimidos.
+
+## 6.3 Mergecap
+
+Es capaz de combinar varios archivos de captura en orden cronológico por defecto generando un único archivo de salida. Puede leer todos los archivos del mismo tipo y escribe en formato libpcap de manera predeterminada.
+
+## 6.4 Text2pcap
+
+Este programa lee ASCII hexadecimal y genera un archivo de captura libpcap.
+
+Tambien es posible leer hexdumps de nivel de aplicación.
+
+## 6.5 Capinfos
+
+Es otro programa de línea de comandos que analiza un archivo de captura además de las estadísticas relacionadas con el número de paquetes, tamaño y demás información.
+
+Capinfos puede tener dos tipos de salidas. La salida larga, adecuada para que sea leida por una persona o el resultado en una tabla, útil para generar un informe adaptable a una hoja de cálculo o base de datos.
+
+## 6.6 Dumpcap
+
+Es una herramienta de volcado de tráfico de red. Permite capturar paquetes de datos de una red en vivo y escribirlos en un archivo. Utiliza las bibliotecas libpcap, Npcap o WinPcap para capturar el tráfico.
 
 # 7. Prácticas realizadas con Wireshark en el ordenador personal:
 
