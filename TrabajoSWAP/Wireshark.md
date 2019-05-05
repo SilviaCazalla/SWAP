@@ -255,7 +255,7 @@ principalmente por el tipo de protocolo que buscan, y dentro de estos hay distin
 propiedades o características de dichos protocolos, las cuales ayudan bastante en 
 cualquier búsqueda específica.
 
-DNS: Si cólo ponemos el filtro
+Se puede realizar un filtro con el nombre del protocolo:
 ```
  dns
 
@@ -275,9 +275,9 @@ Follow UDP Stream
 
 ```
 
-nos devuelve las respués que ha recibido a la pregunta del Dns que se ha realizado.
-Sabiendo el tráfico Dns, es posible conocer la IP del servidor( Puede verse en el campo
-"info, detrás de CNAME, 'A' ").
+nos devuelve las respuestas que ha recibido a la pregunta del Dns que se ha realizado.
+Sabiendo el tráfico Dns, es posible conocer la IP de la página ya que el servidor DNS 
+nos envia el registro CNAME donde aparece.
 
 En una conexión persistente, con 
 
@@ -406,6 +406,49 @@ Capinfos puede tener dos tipos de salidas. La salida larga, adecuada para que se
 Es una herramienta de volcado de tráfico de red. Permite capturar paquetes de datos de una red en vivo y escribirlos en un archivo. Utiliza las bibliotecas libpcap, Npcap o WinPcap para capturar el tráfico.
 
 # 7. Prácticas realizadas con Wireshark en el ordenador personal:
+
+Para probar el funcionamiento de Wireshark hemos probado a realizar distintos ejercicios básicos de captura de paquetes y análisis de 
+los datos obtenidos.
+
+## 7.1. Tramas DNS que han servido para traducir la dirección web www.kia.com
+
+Sólo bastaría con usar el filtro 
+
+```
+DNS contains kia
+```
+Aunque podríamos obtener un filtro más ajustado buscando sólo los paquetes DNS que contengan el registro CNAME:
+
+```
+DNS.cname contains kia
+
+```
+
+()()()(footoo)KIA
+
+## 7.2. Interpretación de una conexión
+
+Vamos a mostrar las tramas generadas al entrar en la página web www.habanos.com
+
+Para ver los puertos origen y destino hemos creado dos columnas nuevas.
+
+A continuación crearemos un filtro para escuchar sólo los paquetes que usen el puerto 80.
+
+```
+(tcp.dstport == 80) || (tcp.srcport == 80)
+```
+Si queremos ver solo las peticiones GET:
+
+```
+((tcp.dstport == 80) || (tcp.srcport == 80)) and http.request.method == GET
+```
+Vamos a seguir el tráfico HTTP del primer GET, que corresponde a la trama 443 con Follow HTTP Stream.
+
+fotooo
+
+Esto nos genera un filtro con toda la comunicación que produce ese GET y nos muestra en código ASCII de manera predeterminada dicha conversación, distinguiendo en rojo y azul los mensajes del emisor y el receptor respectivamente.
+
+
 
 # 8. Archivos adjuntos.
   
