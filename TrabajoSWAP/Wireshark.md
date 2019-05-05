@@ -202,7 +202,7 @@ manera predeterminada, haciendo clic en Continuar hasta finalizar la instalació
 Una vez instalado ya podemos comenzar a capturar paquetes. Lo primero que debemos hacer al 
 iniciar Wireshark es elegir la conexión de red que queremos analizar.
 
-foto
+IMAGEN ELEGIR RED
 
 (En nuestro caso hemos elegido Wi-Fi)
 
@@ -228,11 +228,17 @@ I/O Graphs:
 	Es un gráfico configurable por el usuario de los paquetes capturados, 
 	pueden definirse hasta 5 gráficos de distintos colores.
 	El eje X se medirá el tiempo y en el eje Y el número de paquetes por segundo.
+	
+```
+IMAGEN IO
+
+```
 Flow Graphs:
 	Es un gráfico que muestra un diagrama temporal con el flujo de los paquetes 
 	indicando la IP destino y origen de cada uno, indicando los bits de SYN, ACK, 
 	FIN, además de otros datos relevantes en el margen derecho.
 ```
+IMAGEN FLOW
 
 ### 5.1. Filtrado de paquetes de datos:
 
@@ -244,8 +250,6 @@ rendimiento.
 
 Aunque el filtrado se puede realizar como hemos mencionado antes, durante captura, durante 
 la visualización o después de guardar el paquete de datos que contienen las tramas obtenidas.
-
-(Hay que añadir filtros y tipos de filtros de las practicas de redes y lo que se ocurra más)
 
 
 ### 5.2. Conjunto básico de filtros para el usuario administrador:
@@ -410,9 +414,9 @@ Es una herramienta de volcado de tráfico de red. Permite capturar paquetes de d
 Para probar el funcionamiento de Wireshark hemos probado a realizar distintos ejercicios básicos de captura de paquetes y análisis de 
 los datos obtenidos.
 
-## 7.1. Tramas DNS que han servido para traducir la dirección web www.kia.com
+## 7.1. Tramas DNS
 
-Sólo bastaría con usar el filtro 
+Para identificar la ip de www.kia.com sólo bastaría con usar el filtro 
 
 ```
 DNS contains kia
@@ -432,28 +436,28 @@ Vamos a mostrar las tramas generadas al entrar en la página web www.habanos.com
 
 Para ver los puertos origen y destino hemos creado dos columnas nuevas.
 
-![Creación de columna](./imagenes/nuevaColumna.png)
+IMAGEN NUEVA COLUMNA 
 
 A continuación crearemos un filtro para escuchar sólo los paquetes que usen el puerto 80.
 
 ```
 (tcp.dstport == 80) || (tcp.srcport == 80)
 ```
+
+IMAGEN puerto 80 habanos
+
 Si queremos ver solo las peticiones GET:
 
 ```
 ((tcp.dstport == 80) || (tcp.srcport == 80)) and http.request.method == GET
 ```
+IMAGEN FILTROGET
+
 Vamos a seguir el tráfico HTTP del primer GET, que corresponde a la trama 443 con Follow HTTP Stream.
 
-fotooo
+IMAGEN FOLLOWHTTP
 
 Esto nos genera un filtro con toda la comunicación que produce ese GET y nos muestra en código ASCII de manera predeterminada dicha conversación, distinguiendo en rojo y azul los mensajes del emisor y el receptor respectivamente.
-
-
-
-# 8. Archivos adjuntos.
-  
 
 
 
