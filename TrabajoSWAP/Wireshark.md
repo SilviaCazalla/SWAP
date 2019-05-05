@@ -432,7 +432,7 @@ Vamos a mostrar las tramas generadas al entrar en la página web www.habanos.com
 
 Para ver los puertos origen y destino hemos creado dos columnas nuevas.
 
-![Creación de columna](./imagenes/nueva columna.png)
+![Creación de columna](./imagenes/nuevaColumna.png)
 
 A continuación crearemos un filtro para escuchar sólo los paquetes que usen el puerto 80.
 
