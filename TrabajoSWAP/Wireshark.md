@@ -428,7 +428,7 @@ DNS.cname contains kia
 
 ```
 
-![Filtro para DNS](./imagenes/Kia.PNG)
+![Filtro para DNS](./imagenes/Kia.png)
 
 ## 7.2. Interpretación de una conexión
 
@@ -436,7 +436,7 @@ Vamos a mostrar las tramas generadas al entrar en la página web www.habanos.com
 
 Para ver los puertos origen y destino hemos creado dos columnas nuevas.
 
-IMAGEN NUEVA COLUMNA 
+![Nueva columna](./imagenes/nueva columna.png)
 
 A continuación crearemos un filtro para escuchar sólo los paquetes que usen el puerto 80.
 
@@ -444,18 +444,18 @@ A continuación crearemos un filtro para escuchar sólo los paquetes que usen el
 (tcp.dstport == 80) || (tcp.srcport == 80)
 ```
 
-IMAGEN puerto 80 habanos
+![Imagen puerto 80](./imagenes/puerto 80 habanos.bmp)
 
 Si queremos ver solo las peticiones GET:
 
 ```
 ((tcp.dstport == 80) || (tcp.srcport == 80)) and http.request.method == GET
 ```
-IMAGEN FILTROGET
+![Imagen filtro GET](./filtro GET.png)
 
 Vamos a seguir el tráfico HTTP del primer GET, que corresponde a la trama 443 con Follow HTTP Stream.
 
-IMAGEN FOLLOWHTTP
+![Follow](./imagenes/FOLLOWHTTP.png)
 
 Esto nos genera un filtro con toda la comunicación que produce ese GET y nos muestra en código ASCII de manera predeterminada dicha conversación, distinguiendo en rojo y azul los mensajes del emisor y el receptor respectivamente.
 
