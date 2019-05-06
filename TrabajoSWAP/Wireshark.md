@@ -202,7 +202,7 @@ manera predeterminada, haciendo clic en Continuar hasta finalizar la instalació
 Una vez instalado ya podemos comenzar a capturar paquetes. Lo primero que debemos hacer al 
 iniciar Wireshark es elegir la conexión de red que queremos analizar.
 
-IMAGEN ELEGIR RED
+![Imagen donde se muestra la elección de la red](./imagenes/elegirRed.jpg)
 
 (En nuestro caso hemos elegido Wi-Fi)
 
@@ -428,7 +428,7 @@ DNS.cname contains kia
 
 ```
 
-![Filtro para DNS](./imagenes/Kia.png)
+![Filtro para DNS](./imagenes/kia.jpg)
 
 ## 7.2. Interpretación de una conexión
 
@@ -436,7 +436,7 @@ Vamos a mostrar las tramas generadas al entrar en la página web www.habanos.com
 
 Para ver los puertos origen y destino hemos creado dos columnas nuevas.
 
-![Nueva columna](./imagenes/nueva columna.png)
+![Nueva columna](./imagenes/nueva_columna.jpg)
 
 A continuación crearemos un filtro para escuchar sólo los paquetes que usen el puerto 80.
 
@@ -444,18 +444,18 @@ A continuación crearemos un filtro para escuchar sólo los paquetes que usen el
 (tcp.dstport == 80) || (tcp.srcport == 80)
 ```
 
-![Imagen puerto 80](./imagenes/puerto 80 habanos.bmp)
+![Imagen puerto 80](./imagenes/puerto_80_habanos.jpg)
 
 Si queremos ver solo las peticiones GET:
 
 ```
 ((tcp.dstport == 80) || (tcp.srcport == 80)) and http.request.method == GET
 ```
-![Imagen filtro GET](./filtro GET.png)
+![Imagen filtro GET](./imagenes/filtro_GET.jpg)
 
 Vamos a seguir el tráfico HTTP del primer GET, que corresponde a la trama 443 con Follow HTTP Stream.
 
-![Follow](./imagenes/FOLLOWHTTP.png)
+![Follow](./imagenes/FOLLOWHTTP.jpg)
 
 Esto nos genera un filtro con toda la comunicación que produce ese GET y nos muestra en código ASCII de manera predeterminada dicha conversación, distinguiendo en rojo y azul los mensajes del emisor y el receptor respectivamente.
 
