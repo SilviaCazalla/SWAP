@@ -40,3 +40,18 @@ cp apache.crt etc.apache2.SSL.
 sudo a2enmod ssl y sudo a2ensite default-ssl.conf
 
 ```
+
+Después de esto podemos ver como el curl funciona para cualquier máquina de nuestra granja.
+
+# Configuración del cortafuegos con IPTABLES
+
+Procedemos a crear un script activar-cortafuegos en /etc y ejecutamos el comando siguiente comando para que se ejecute al inicio 
+del sistema:
+
+```
+
+chmod +x /etc/activar-cortafuegos
+
+```
+
+A continuación editamos el archivo /etc/rc.local para añadir la ruta de nuestro script.
