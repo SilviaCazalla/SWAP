@@ -45,7 +45,7 @@ sudo a2enmod ssl y sudo a2ensite default-ssl.conf
 
 Después de esto podemos ver como el curl funciona para cualquier máquina de nuestra granja.
 
-***IMAGEN DE LAS CONEXIONES HTTPS***
+![Imagen que muestra las conexiones https de la granja](./imagenes/CURL_K.PNG)
 
 # Configuración del cortafuegos con IPTABLES
 
@@ -61,4 +61,5 @@ chmod +x /etc/activar-cortafuegos
 A continuación editamos el archivo /etc/rc.local para añadir la ruta de nuestro script.
 
 En esta imagen se muestra el código del script utilizado para realizar el cortafuegos.
-***IMAGEN SCRIPT***
+
+![Imagen que muestra el script para el cortafuegos 'activar-cortafuegos'](./imagenes/ACTIVARCF.PNG)
