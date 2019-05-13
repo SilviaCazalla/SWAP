@@ -7,7 +7,7 @@ Generamos un certificado SSL autofirmado en Ubuntu Server.
 Para ello activamos el módulo SSL de Apache, y generamos el certificado en nuestra máquina principal 
 (MACHINE2) y específicamos la ruta a los certificados en la configuración.
 
-***IMAGEN DE CERTIFICADO***
+![Imagen que muestra la creación del certificado](./imagenes/creacioncertificado.jpeg)
 
 Completamos los datos que nos pide para configurar el dominio, editamos el archivo default-ssl, activamos 
 el sitio default-ssl y reiniciamos apache.
