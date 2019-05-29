@@ -33,7 +33,9 @@ E insertamos varios registros usando esta estructura:
 ```
 mysql> insert into datos(nombre,tlf) values ("pepe",95734987);
 ```
-INSERTAR IMAGEN BASEDATOS.PNG
+
+![imagen base de datos](./imagenes/BASEDATOS.PNG)
+
 
 # Replicar una BD MySQL con mysqldump y clonado manual
 
@@ -54,7 +56,7 @@ Y volvemos a desbloquear las tablas con un UNLOCK TABLES en mysql.
 En este momento hemos ido a la máquina secundaria para copiar el archivo .sql desde 
 la máquina principal con un scp.
 
-INSERTAR IMAGEN SCP.PNG
+![Imagen scp](./imagenes/SCP.PNG)
 
 Para poder tener la base de datos "contactos" en la máquina esclava debemos crearla 
 vacía inicialmente y salir de mysql para usar el comando:
@@ -64,7 +66,7 @@ mysql -u root -p contactos < /tmp/contactos.sql
 ```
 Mostramos la base de datos copiada a la máquina secundaria:
 
-INSERTAR IMAGEN TABLACOPIADA.PNG
+![Imagen que muestra la copia de la tabla realizada](./imagenes/TABLACOPIADA.PNG)
 
 # Replicación de BD con configuración maestro-esclavo automática
 
@@ -82,7 +84,8 @@ Y reiniciamos mysql:
 ```
 /etc/init.d/mysql restart
 ```
-INSERTAR IMAGEN MYSQLD.CNF.PNG
+
+![Imagenes de MySQL](./imagenes/MYSQLD.CNF.PNG)
 
 Hacemos lo mismo para la máquina esclavo pero con server-id=2 y reiniciamos.
 
