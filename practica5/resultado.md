@@ -93,7 +93,7 @@ A partir de aquí tuvimos problemas para continuar, perdimos la conexión de red
 virtuales y tuvimos que reinstalar VMWare.
 
 
-
+Se reinstaló VMWare y vlvimos a tener conexión, repetimos varias veces la práctica ya que el último punto da error, y no hemos conseguido solucionarlo.
 
 
 
